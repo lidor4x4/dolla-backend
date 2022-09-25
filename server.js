@@ -9,7 +9,7 @@ dotENV.config();
 const app = express();
 connection()
 
-app.use(cors({origin:'https://gentle-meringue-57d73a.netlify.app', credentials: true}));
+app.use(cors({origin:'*', credentials: true}));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json())
 app.use("/api/users", require("./routes/UserRoute"));
